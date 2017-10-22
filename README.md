@@ -1,4 +1,26 @@
-#Webpack Sample
+# Webpack Sample
+
+Webpack is bundler. Use the following commands and npm scripts to bundle javascript files.
+
+**bundle single file from shell**
+
+`$ ./node_modules/.bin/webpack folder/main.js folder/bundle.js`
+
+**bundle from a config file from shell**
+
+`$ ./node_modules/.bin/webpack --config webpack.config.js`
+
+**bundle from a config file via npm script**
+
+create npm script to only bundle once
+
+`"build": "webpack",`
+
+then run
+
+```
+$ npm run build
+```
 
 These npm scripts can be used to run webpack for development
 
