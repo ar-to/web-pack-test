@@ -28,7 +28,8 @@ These npm scripts can be used to run webpack for development
 "scripts": {
   "start": "webpack-dev-server --watch",
   "build":"webpack --progress --profile",
-  "build-w": "webpack --debug --progress --watch"
+  "build-w": "webpack --debug --progress --watch",
+  "dev": "webpack-dev-server --content-base src --inline --hot"
 },
 ```
 
