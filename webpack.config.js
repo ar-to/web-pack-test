@@ -6,7 +6,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   filename: 'index.html',
   inject: 'body'
 })
-const APP_DIR = path.resolve(__dirname, './src/app.js');
+const APP_DIR = path.resolve(__dirname, './src/index.js');
 const BUILD_DIR = path.resolve(__dirname, './public/dist/');
 
 module.exports = {
