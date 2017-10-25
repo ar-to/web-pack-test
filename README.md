@@ -2,6 +2,15 @@
 
 Webpack is bundler. Use the following commands and npm scripts to bundle javascript files.
 
+## Getting Started
+
+```
+git clone git@github.com:ar-to/webpack-exercise.git
+cd webpack-exercise
+yarn install
+```
+
+
 **bundle single file from shell**
 
 `$ ./node_modules/.bin/webpack folder/main.js folder/bundle.js`
