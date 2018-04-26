@@ -1,6 +1,6 @@
 {
   "name": "test-webpack",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Demo Application showing how to set up react with webpack,yarn and babel",
   "main": "index.js",
   "author": "ar-to",
