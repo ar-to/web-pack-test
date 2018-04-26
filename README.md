@@ -71,6 +71,12 @@ $ yarn add --dev css-loader style-loader file-loader url-loader
 
 Use CSS modules by importing to specific components with `import 'styles.css'`
 
+## Webpack Plugins
+
+HtmlWebpackPlugin - makes a script tag in the built html file. See [this](https://css-tricks.com/introduction-webpack-entry-output-loaders-plugins/) for more info.
+
+[CopyWebpackPlugin](https://github.com/webpack-contrib/copy-webpack-plugin) - copies files or directories into build 
+
 ## Known Issues
 
 * webpack-dev-server does not build from public/dist but it does update browser (??)

@@ -1,19 +1,30 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './src/index.html',
   filename: 'index.html',
   inject: 'body'
-})
+});
+const CopyWebpackPluginConfig = new CopyWebpackPlugin([
+  { from: './bower_components/shufflejs/dist/shuffle.min.js', to: 'js/' },
+  { from: './bower_components/bootstrap/dist/css/bootstrap.min.css', to: 'css/' }
+], { debug: 'info' });
+
 const APP_DIR = path.resolve(__dirname, './src/index.js');
+const SHUFFLE_DIR = path.resolve(__dirname, './bower_components/shufflejs/dist/shuffle.min.js');
 const BUILD_DIR = path.resolve(__dirname, './public/dist/');
 
 module.exports = {
-     entry: APP_DIR,
+     entry: {
+       app: APP_DIR,
+      //  shuffle: SHUFFLE_DIR
+     },
      output: {
          path: BUILD_DIR,
-         filename: 'js/app.bundle.js'
+         filename: 'js/[name].js'
      },
      module: {
       rules: [
@@ -27,5 +38,8 @@ module.exports = {
     devServer: {
       contentBase: './public/dist'
     },
-    plugins: [HtmlWebpackPluginConfig]
+    plugins: [
+      HtmlWebpackPluginConfig,
+      CopyWebpackPluginConfig
+    ]
  };
